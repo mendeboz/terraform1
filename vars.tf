@@ -4,9 +4,7 @@ variable "environment" {
 
 
 
-variable "aws_region" {
-  default = "us-east-1"
-}
+
 
 ### Ubuntu Server 18.04 LTS 64-bit ###
 variable "ami_ubuntu_18" {
@@ -21,6 +19,10 @@ variable "ami_ubuntu_20" {
 variable "account_id" {
   description = "Default account ID"
   default = "898004513500"
+}
+
+variable "cidr_production_vpc" {
+  default = "172.31.0.0/16"
 }
 
 
