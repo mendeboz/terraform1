@@ -7,11 +7,19 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "githubs3backend"
-    key    = "terraform1/terraform.tfstate"
-    region = "us-east-1"
-  }
+  # backend "s3" {
+  #   bucket = "githubs3backend"
+  #   key    = "terraform1/terraform.tfstate"
+  #   region = "us-east-1"
+  # }
+  cloud { 
+    
+    organization = "newmendeboz" 
+
+    workspaces { 
+      name = "terraform1" 
+    } 
+  } 
 }
 
 provider "aws" {
