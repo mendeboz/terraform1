@@ -32,13 +32,13 @@ variable "jenkins_trigger" {
 variable "vpc_cidr_block" {
   description = "The CIDR block for the VPC"
   type = string
-  default     = "10.0.0.0/16"
+  default     = "10.1.0.0/16"
 }
 
 variable "subnet_private_a" {
   type = map(string)
   default = {
-    "cidr_block"  = "10.0.1.0/24",
+    "cidr_block"  = "10.1.1.0/24",
     "description" = "Private Subnet A CIDR Block"
   }
 
@@ -46,7 +46,7 @@ variable "subnet_private_a" {
 variable "subnet_private_b" {
   type = map(string)
   default = {
-    "cidr_block"  = "10.0.2.0/24",
+    "cidr_block"  = "10.1.2.0/24",
     "description" = "Private Subnet B CIDR Block"
   }
 
