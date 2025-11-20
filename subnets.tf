@@ -14,4 +14,8 @@ resource "aws_subnet" "subnet_private_b" {
   vpc_id = aws_vpc.prod_eks.id
   cidr_block = var.subnet_private_a["cidr_block"]
   availability_zone = "us-east-1b"
+  tags = {
+    "Name" = "ec2_subnet-change"
+    "description" =	"delete"
+  } 
 }
